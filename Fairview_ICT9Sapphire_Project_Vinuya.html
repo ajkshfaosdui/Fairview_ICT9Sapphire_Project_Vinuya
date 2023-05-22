@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+	<title>CONVERTION CALCULATOR!!</title>
+<style type="text/css">
+body {
+	background-color: #FFC0CB;
+	text-align: center;
+	align-items: center;
+}
+
+.irow {
+	text-align: left;
+}
+
+#table {
+	width: auto;
+	background-color: #803945;
+	border-radius: 45px;
+	align-items: center;
+	justify-content: center;
+}
+
+.drow {
+	color: #FFC0CB;
+	text-align: left;
+}
+
+.desired {
+	border-radius: 25px;
+	border-color: #FFC0CB;
+}
+
+#length {
+	border-radius: 25px;
+	border-color: #FFC0CB;
+}
+
+.converted {
+	border-radius: 25px;
+	border-color: #FFC0CB;
+}
+
+.btn {
+	border-radius: 25px;
+	border-color: #FFC0CB;
+}
+</style>
+</head>
+
+<body>
+<h1>C O N V E R T I O N  (^人^) C A L C U L A T O R</h1>
+<br>
+<div class="container form-control" id="table">
+	<h3 style="color: #FFC0CB; text-align: center;">UNIT (●'◡'●) CONVERTER</h3>
+	<div class="row irow">
+		<label>
+			<h2 style="color: #FFC0CB; text-align: left;">Measurement</h2>
+		</label>
+		<select class="form-control form-select form-select-lg" id="length">
+			<option>
+				Length
+			</option>
+		</select>
+	</div>
+<br>
+	<div class="row align-items-center drow">
+		<div class="col-lg-12">
+			<label>Input Desired Value:</label>
+			<input type="number" name="input" class="desired" placeholder="number">
+			<label><h3 style="text-align: center;"> = </h3></label>
+			<label>Converted Value:</label>
+			<input type="number" name="convert" class="converted">
+		</div>
+	</div>
+<br>
+	<div class="buttonconv" align="center">
+		<div>
+			<button class="btn" onclick="ToCent()">To Centimeters</button>
+			<button class="btn" onclick="ToMet()">To Meters</button>
+			<button class="btn" onclick="ToKilo()">To KiloMeters</button>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	function ToCent() {
+		var base = document.getElementsByName('input')[0].value;
+		var result = parseFloat(input) / 10;
+		document.getElementsByName('convert')[0].value = result;
+	}
+	function ToMet() {
+		var base = document.getElementsByName('input')[0].value;
+		var result = parseFloat(input) / 1000;
+		document.getElementsByName('convert')[0].value = result;
+	}
+    function ToKilo() {
+		var base = document.getElementsByName('input')[0].value;
+		var result = parseFloat(input) / 1000000;
+		document.getElementsByName('convert')[0].value = result;
+	}	
+</script>
+</body>
+</html>
